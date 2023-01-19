@@ -6,17 +6,16 @@
  121
 12321
 """
-u_i = int(input('Введите данные: '))
-u_s1 = ""
-u_s2 = ""
-s = " "
-j = 0
-for i in range(1, u_i+1):
-    j += 1
-    j2 = u_i - j
-    u_s1 = u_s1 + str(i+1)
-    u_s2 = str(i+1) + u_s2
-    u_s = u_s1 +u_s2
-    print(u_s1)
+n = int(input('Введите число ступеней меньше 10: '))
+if n > 9:
+    print('Ошибка, количество ступеней должно быть меньше 10')
+else:
+    for i in range(1,n+1):
+        step = ' '*(n-i)
+        for j in range(1,i+1):
+            step+=str(j)
+        for j in range(i-1,0,-1):
+            step+=str(j)
+        print(step)
 """Дополните код, чтобы теперь получался ромб. 
 То есть количество ступеней должно равняться числу n*2-1."""
