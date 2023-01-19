@@ -13,5 +13,14 @@ u_s = ""
 for i in range(1, u_i+1):
     u_s = u_s + str(i)
     print(u_s)
+    
+n = int(input('Введите число ступеней меньше 10: '))
+if n > 9:
+    print('Ошибка, количество ступеней должно быть меньше 10')
+else:
+    step = ''
+    for i in range(n):
+        step+=str(i+1)
+        print(step)
 
 
